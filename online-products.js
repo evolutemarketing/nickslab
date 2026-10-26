@@ -1,5 +1,5 @@
 /* Nicks Laboratories: merge live Supabase products with the existing static catalogue. */
-(async()=>{
+window.NICKS_PRODUCTS_READY=(async()=>{
  const cfg=window.NICKS_SUPABASE_CONFIG;
  const fallback=Array.isArray(window.NICKS_PRODUCTS)?window.NICKS_PRODUCTS:[];
  if(!cfg||!window.supabase){window.NICKS_PRODUCTS=fallback;return;}
