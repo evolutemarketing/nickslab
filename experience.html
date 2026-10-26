@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<meta content="0; url=index.html#experience" http-equiv="refresh"/><title>3D Experience — Home</title><a href="index.html#experience">View 3D animation on Home</a><style id="nicks-final-3d-icon">
+/* Focused revision: unchanged site theme/content; header official logo and floating 3D-style emblem only. */
+nav .brand.nicks-official-brand{display:inline-flex!important;align-items:center!important;max-width:clamp(160px,19vw,245px)!important;width:auto!important;flex:0 0 auto!important}
+nav .brand.nicks-official-brand img{display:block;width:100%;height:auto;max-height:65px;object-fit:contain;object-position:left center}
+.nicks-icon-stage{perspective:1100px;isolation:isolate;overflow:visible}
+.nicks-icon-stage .nicks-3d-body{position:relative;z-index:3;width:min(29vw,380px);aspect-ratio:523/550;transform-style:preserve-3d;animation:nicks3dHover 5.5s ease-in-out infinite}
+.nicks-icon-stage .nicks-3d-body img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;backface-visibility:visible}
+.nicks-icon-stage .nicks-3d-body .nicks-3d-depth{filter:brightness(.46) saturate(1.25) drop-shadow(12px 18px 12px rgba(6,25,56,.18));transform:translate3d(12px,10px,-22px)}
+.nicks-icon-stage .nicks-3d-body .nicks-3d-mid{filter:brightness(.67) saturate(1.25);transform:translate3d(7px,6px,-12px)}
+.nicks-icon-stage .nicks-3d-body .nicks-3d-front{filter:drop-shadow(0 25px 28px rgba(7,27,56,.24)) drop-shadow(0 2px 4px rgba(255,255,255,.4));transform:translateZ(12px)}
+.nicks-icon-stage .nicks-3d-shadow{position:absolute;z-index:1;bottom:12%;left:25%;width:50%;height:9%;border-radius:50%;background:rgba(8,40,85,.18);filter:blur(22px);animation:nicksShadow 5.5s ease-in-out infinite}
+@keyframes nicks3dHover{0%,100%{transform:translateY(6px) rotateY(-16deg) rotateX(7deg) rotateZ(-3deg)}50%{transform:translateY(-20px) rotateY(16deg) rotateX(-5deg) rotateZ(3deg)}}
+@keyframes nicksShadow{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:.3;transform:scale(.75)}}
+@media(max-width:800px){.nicks-icon-stage .nicks-3d-body{width:min(50vw,270px)}nav .brand.nicks-official-brand{max-width:155px!important}}
+@media(prefers-reduced-motion:reduce){.nicks-icon-stage .nicks-3d-body,.nicks-icon-stage .nicks-3d-shadow{animation:none!important}}
+</style>
