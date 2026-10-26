@@ -5,7 +5,7 @@ window.NICKS_PRODUCTS_READY=(async()=>{
  if(!cfg||!window.supabase){window.NICKS_PRODUCTS=fallback;return;}
  try{
   const client=window.supabase.createClient(cfg.url,cfg.key);
-  const {data,error}=await client.from('products').select('id,name,category,pack,ingredients,description,images,published').eq('published',true);
+  const {data,error}=await client.from('products').select('id,name,category,pack,ingredients,description,images,published');
   if(error)throw error;
   const live=(data||[]).map(p=>({...p,image:p.images?.[0]||''}));
   const names=new Set(live.map(p=>p.name.trim().toLowerCase()));
