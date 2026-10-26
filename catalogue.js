@@ -2,7 +2,7 @@
 const list=Array.isArray(window.NICKS_PRODUCTS)?window.NICKS_PRODUCTS:[];
 const grid=document.querySelector('.cards');if(!grid)return;
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const validImage=s=>typeof s==='string'&&(s.startsWith('assets/')||/^data:image\/(png|jpeg|webp);base64,/.test(s));
+const validImage=s=>typeof s==='string'&&(s.startsWith('assets/')||/^https:\/\/[a-z0-9-]+\.supabase\.co\/storage\/v1\/object\/public\/product-images\//.test(s)||/^data:image\/(png|jpeg|webp);base64,/.test(s));
 for(const p of list.filter(p=>p.published)){
  const btn=document.createElement('button');btn.type='button';btn.className='product';btn.dataset.name=p.name||'';btn.dataset.cat=p.category||'Other';
  const im=document.createElement('img');im.loading='lazy';im.alt=(p.name||'Product')+' image';const photos=(Array.isArray(p.images)?p.images:[p.image]).filter(validImage).slice(0,4);if(photos.length)im.src=photos[0];
